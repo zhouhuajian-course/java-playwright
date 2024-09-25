@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>填写资料</title>
+</head>
+<body>
+  <form action="/profile" method="post" enctype="multipart/form-data">
+    <div>姓名：<input type="text" name="name" /></div>
+    <div>头像：<input type="file" name="avatar" /></div>
+    <div>性别：<label><input type="radio" name="gender" value="男" />男</label>
+              <label><input type="radio" name="gender" value="女" />女</label>
+    </div>
+    <div>生日：<input type="date" name="birthday"/></div>
+    <div>简介：<textarea name="intro"></textarea></div>
+    <div>民族：<select name="nationality">
+                <option value="">请选择</option>
+                <option value="汉族">汉族</option>
+                <option value="少数民族">少数民族</option>
+              </select>
+    </div>
+    <div>语言：<label><input type="checkbox" name="languages" value="普通话" />普通话</label>
+              <label><input type="checkbox" name="languages" value="粤语" />粤语</label>
+              <label><input type="checkbox" name="languages" value="英语" />英语</label>
+    </div>
+    <div><button type="submit">提交</button></div>
+  </form>
+</body>
+</html>

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>用户协议</title>
+</head>
+<body>
+  <h1>用户协议</h1>
+  <p>欢迎使用本功能，接受协议才能继续使用……</p>
+  <button id="accept-btn" disabled>接受</button>
+  <button>拒绝</button>
+  <script>
+    setTimeout(() => {
+      document.querySelector("#accept-btn").disabled = false;
+    }, 10000);
+  </script>
+</body>
+</html>

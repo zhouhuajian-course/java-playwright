@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<!--suppress ALL -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>用户反馈</title>
+  <style>div { margin-bottom: 5px; } .info { color: green; } .error { color: red; }</style>
+</head>
+<body>
+  <h3>用户反馈</h3>
+  <form action="/feedback" method="post">
+    <div>内容：</div>
+    <div><textarea name="content" rows="5" required></textarea></div>
+    <div>邮箱：<i>（接收处理结果）</i></div>
+    <div><input name="email" type="email" value="user@email.com" required /></div>
+    <div><button type="submit">提交</button></div>
+  </form>
+  <div id="message" th:class="${type}" th:text="${message}"></div>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>房子</title>
+  <style>html { height: 100%; } canvas { background: #ecf0f1; } div { margin-bottom: 10px; }</style>
+</head>
+
+<body>
+  <h3>画个房子</h3>
+  <div>
+    <canvas id="canvas" width="300" height="300"></canvas>
+  </div>
+  <div>
+    <button id="draw-roof-btn">画个屋顶</button>
+    <button id="draw-wall-btn">画个墙壁</button>
+    <button id="draw-door-btn">画个大门</button>
+  </div>
+  <script>
+    const canvas = document.querySelector("#canvas")
+    const ctx = canvas.getContext("2d")
+    ctx.lineWidth = 1;
+
+    const drawRoofBtn = document.querySelector("#draw-roof-btn")
+    const drawWallBtn = document.querySelector("#draw-wall-btn")
+    const drawDoorBtn = document.querySelector("#draw-door-btn")
+  
+    // 画屋顶
+    drawRoofBtn.onclick = (event) => {
+      ctx.beginPath();
+      ctx.strokeStyle = "red"
+      ctx.moveTo(50, 140);
+      ctx.lineTo(150, 60);
+      ctx.lineTo(250, 140);
+      ctx.closePath();
+      ctx.stroke();
+    }
+
+    // 画墙壁
+    drawWallBtn.onclick = (event) => {
+      ctx.beginPath()
+      ctx.strokeStyle = "green"
+      ctx.strokeRect(75, 140, 150, 110);
+    }
+
+    // 画大门
+    drawDoorBtn.onclick = (event) => {
+      ctx.beginPath()
+      ctx.fillStyle = "blue"
+      ctx.fillRect(130, 190, 40, 60);
+    }
+  </script>
+</body>
+
+</html>
